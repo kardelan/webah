@@ -13,7 +13,8 @@ export function TokenomicsSection() {
           <Card className="bg-blue-900 border-blue-700">
             <CardContent className="p-8 text-center">
               <div className="mb-4">
-                <img src="/monko-smart.png" alt="Smart Monko" className="w-20 h-20 mx-auto" />
+                <img src="/monko-character-diamon-hands.png" alt="Diamond Hands Monko" className="w-20 h-20 mx-auto" />{" "}
+                {/* Kept monko-character-diamon-hands.png for supply */}
               </div>
               <h3 className="text-2xl font-bold text-yellow-400 mb-2">Total Supply</h3>
               <p className="text-4xl font-bold text-white">1,000,000,000</p>
@@ -24,7 +25,8 @@ export function TokenomicsSection() {
           <Card className="bg-blue-900 border-blue-700">
             <CardContent className="p-8 text-center">
               <div className="mb-4">
-                <img src="/monko-vacation.png" alt="Chill Monko" className="w-20 h-20 mx-auto" />
+                <img src="/monko-character-chad.png" alt="Chad Monko" className="w-20 h-20 mx-auto" />{" "}
+                {/* Kept monko-character-chad.png for network strength */}
               </div>
               <h3 className="text-2xl font-bold text-yellow-400 mb-2">Network</h3>
               <p className="text-2xl font-bold text-white">Algorand</p>

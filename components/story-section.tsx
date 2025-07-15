@@ -17,14 +17,14 @@ const stories = [
   },
   {
     title: "The Philosopher",
-    image: "/monko-hamlet.png",
+    image: "/monko-see.png",
     description:
       "In quiet moments, Monko contemplates the deeper meaning of DeFi, memes, and the nature of digital value. To moon or not to moon?",
     meme: '"Alas, poor FIAT, I knew thee well" - Intellectual Monko',
   },
   {
     title: "The Hype Beast",
-    image: "/monko-yell.png",
+    image: "/monko-character-chicken-monko.png",
     description:
       "When big news drops or pumps happen, Monko can't contain his excitement. He's the voice of every trader's inner emotions.",
     meme: '"LFG! TO THE MOON! 🚀🚀🚀" - Excited Monko',

@@ -6,12 +6,12 @@ import { TokenomicsSection } from "@/components/tokenomics-section"
 import { RoadmapSection } from "@/components/roadmap-section"
 import { CommunitySection } from "@/components/community-section"
 import { Footer } from "@/components/footer"
-import { LoadingScreen } from "@/components/loading-screen" // Import LoadingScreen
+import { LoadingScreen } from "@/components/loading-screen"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-blue-950">
-      <LoadingScreen /> {/* Tambahkan LoadingScreen di sini */}
+      <LoadingScreen />
       <Header />
       <HeroSection />
       <AboutSection />

@@ -49,16 +49,7 @@ export function Footer() {
                   Telegram
                 </a>
               </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-yellow-400 text-sm">
-                  Discord
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-yellow-400 text-sm">
-                  Reddit
-                </a>
-              </li>
+              {/* Removed Discord and Reddit links */}
             </ul>
           </div>
         </div>

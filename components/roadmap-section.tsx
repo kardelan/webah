@@ -5,7 +5,7 @@ const roadmapPhases = [
     phase: "Phase 1",
     title: "The Birth of Monko",
     status: "completed",
-    image: "/monko-yell.png",
+    image: "/monko-character-chicken-monko.png",
     items: [
       "Token Launch on Algorand",
       "Community Building",
@@ -18,7 +18,7 @@ const roadmapPhases = [
     phase: "Phase 2",
     title: "Growing the Army",
     status: "current",
-    image: "/monko-samurai.png",
+    image: "/monko-character-affluent.png",
     items: [
       "Major Exchange Listings",
       "NFT Collection Launch",
@@ -31,7 +31,7 @@ const roadmapPhases = [
     phase: "Phase 3",
     title: "Monko Ecosystem",
     status: "future",
-    image: "/monko-smart.png",
+    image: "/monko-character-chat.png",
     items: [
       "Monko DeFi Platform",
       "Cross-Chain Bridge",
@@ -44,7 +44,7 @@ const roadmapPhases = [
     phase: "Phase 4",
     title: "To the Moon",
     status: "future",
-    image: "/monko-vacation.png",
+    image: "/monko-character-goblin.png",
     items: [
       "Global Partnerships",
       "Monko Metaverse",
@@ -83,17 +83,9 @@ export function RoadmapSection() {
                     <h3 className="text-xl font-bold text-white">{phase.title}</h3>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <img
-                      src={phase.image || "/placeholder.svg"}
-                      alt={phase.title}
-                      className="w-12 h-12 object-contain"
-                    />
-                    {phase.status === "completed" && <span className="text-green-500 font-bold">Done</span>}{" "}
-                    {/* Replaced Check icon */}
-                    {phase.status === "current" && <span className="text-yellow-400 font-bold">In Progress</span>}{" "}
-                    {/* Replaced Clock icon */}
-                    {phase.status === "future" && <span className="text-gray-400 font-bold">Planned</span>}{" "}
-                    {/* Replaced Star icon */}
+                    {phase.status === "completed" && <span className="text-green-500 font-bold">Done</span>}
+                    {phase.status === "current" && <span className="text-yellow-400 font-bold">In Progress</span>}
+                    {phase.status === "future" && <span className="text-gray-400 font-bold">Planned</span>}
                   </div>
                 </div>
 

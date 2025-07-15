@@ -6,10 +6,10 @@ export function HeroSection() {
   return (
     <section className="pt-24 pb-16 px-4 flex flex-col items-center justify-center min-h-screen">
       <div className="text-center space-y-8">
-        {/* Monkey Avatar */}
+        {/* Monkey Avatar without yellow circle background */}
         <div className="relative">
-          <div className="w-48 h-48 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-8 overflow-hidden">
-            <img src="/monko-vacation.png" alt="Monko Character" className="w-40 h-40 object-contain" />
+          <div className="w-48 h-48 flex items-center justify-center mx-auto mb-8 overflow-hidden">
+            <img src="/monko-hero-circle.png" alt="Monko Character" className="w-40 h-40 object-contain" />
           </div>
         </div>
 
@@ -18,11 +18,9 @@ export function HeroSection() {
           <span className="text-yellow-400 font-mono text-sm">$MONKO</span>
           <span className="text-gray-400 font-mono text-sm">{contractAddress}</span>
           <button className="text-gray-400 hover:text-yellow-400 transition-colors">
-            {/* Removed Copy icon */}
             <span className="text-sm">Copy</span>
           </button>
           <button className="text-gray-400 hover:text-yellow-400 transition-colors">
-            {/* Removed ExternalLink icon */}
             <span className="text-sm">Link</span>
           </button>
         </div>
@@ -32,8 +30,8 @@ export function HeroSection() {
           <h1 className="text-6xl md:text-8xl font-bold text-orange-500 flex items-center justify-center">
             BE M
             <span className="inline-block w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center overflow-hidden">
-              <img src="/monko-see.png" alt="Monko" className="w-12 h-12 object-contain" />{" "}
-              {/* Changed to monko-see.png */}
+              <img src="/monko-yell.png" alt="Monko" className="w-12 h-12 object-contain" />{" "}
+              {/* Updated to monko-yell.png for hype */}
             </span>
             NKO
           </h1>

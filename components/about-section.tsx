@@ -9,7 +9,8 @@ export function AboutSection() {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <img src="/monko-see.png" alt="Monko Contemplating" className="w-full max-w-md mx-auto" />
+            <img src="/monko-hamlet.png" alt="Monko Contemplating" className="w-full max-w-md mx-auto" />{" "}
+            {/* Kept monko-hamlet.png for philosophy */}
           </div>
 
           <div className="space-y-6">
@@ -25,19 +26,19 @@ export function AboutSection() {
             </p>
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">✓</span> {/* Replaced Check icon */}
+                <span className="text-white font-bold">✓</span>
               </div>
               <span className="text-gray-300">Community Owned & Driven</span>
             </div>
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">✓</span> {/* Replaced Check icon */}
+                <span className="text-white font-bold">✓</span>
               </div>
               <span className="text-gray-300">Environmentally Friendly (Algorand)</span>
             </div>
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">✓</span> {/* Replaced Check icon */}
+                <span className="text-white font-bold">✓</span>
               </div>
               <span className="text-gray-300">Meme-Driven Utility</span>
             </div>
