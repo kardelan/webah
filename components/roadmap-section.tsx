@@ -9,7 +9,7 @@ const roadmapPhases = [
     title: "The Birth of Monko",
     status: "completed",
     items: [
-      "Token Launch on Algorand",
+      "Launch on Ape Store", // Changed from "Token Launch on Algorand"
       "Community Building",
       "Initial Meme Creation",
       "Social Media Presence",

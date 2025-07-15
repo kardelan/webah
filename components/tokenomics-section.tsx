@@ -62,8 +62,8 @@ export function TokenomicsSection() {
                   <img src="/monko-character-chad.png" alt="Chad Monko" className="w-20 h-20 object-contain" />
                 </div>
                 <h3 className="text-2xl font-bold text-yellow-400 mb-2">Network</h3>
-                <p className="text-2xl font-bold text-white">Algorand</p>
-                <p className="text-gray-400 mt-2">Fast & Eco-Friendly</p>
+                <p className="text-2xl font-bold text-white">Base Network</p>
+                <p className="text-gray-400 mt-2">Fast & Scalable</p>
               </CardContent>
             </Card>
           </motion.div>
