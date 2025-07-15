@@ -5,7 +5,6 @@ const roadmapPhases = [
     phase: "Phase 1",
     title: "The Birth of Monko",
     status: "completed",
-    image: "/monko-character-chicken-monko.png",
     items: [
       "Token Launch on Algorand",
       "Community Building",
@@ -18,7 +17,6 @@ const roadmapPhases = [
     phase: "Phase 2",
     title: "Growing the Army",
     status: "current",
-    image: "/monko-character-affluent.png",
     items: [
       "Major Exchange Listings",
       "NFT Collection Launch",
@@ -31,7 +29,6 @@ const roadmapPhases = [
     phase: "Phase 3",
     title: "Monko Ecosystem",
     status: "future",
-    image: "/monko-character-chat.png",
     items: [
       "Monko DeFi Platform",
       "Cross-Chain Bridge",
@@ -44,7 +41,6 @@ const roadmapPhases = [
     phase: "Phase 4",
     title: "To the Moon",
     status: "future",
-    image: "/monko-character-goblin.png",
     items: [
       "Global Partnerships",
       "Monko Metaverse",
@@ -64,7 +60,9 @@ export function RoadmapSection() {
           <p className="text-gray-300 text-lg">The journey of Monko through the crypto universe</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {" "}
+          {/* Changed to grid-cols-1 for mobile */}
           {roadmapPhases.map((phase, index) => (
             <Card
               key={index}
@@ -77,12 +75,16 @@ export function RoadmapSection() {
               }`}
             >
               <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex flex-col sm:flex-row items-center justify-between mb-4 text-center sm:text-left">
+                  {" "}
+                  {/* Adjusted for mobile alignment */}
                   <div>
                     <span className="text-sm text-gray-400">{phase.phase}</span>
                     <h3 className="text-xl font-bold text-white">{phase.title}</h3>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2 mt-2 sm:mt-0">
+                    {" "}
+                    {/* Added margin top for mobile */}
                     {phase.status === "completed" && <span className="text-green-500 font-bold">Done</span>}
                     {phase.status === "current" && <span className="text-yellow-400 font-bold">In Progress</span>}
                     {phase.status === "future" && <span className="text-gray-400 font-bold">Planned</span>}

@@ -10,42 +10,36 @@ export function CommunitySection() {
           <p className="text-gray-300 text-lg">Connect with fellow Monko enthusiasts and meme creators</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          {" "}
+          {/* Changed to grid-cols-1 for mobile */}
           <Card className="bg-blue-900 border-blue-700">
             <CardContent className="p-8 text-center">
               <img
-                src="/monko-character-professor-teaching.png"
+                src="/monko-character-chat.png"
                 alt="Community Monko"
-                className="w-32 h-32 mx-auto mb-6"
+                className="w-32 h-32 mx-auto mb-6 object-contain"
               />{" "}
-              {/* Updated to monko-character-professor-teaching.png */}
+              {/* Added object-contain */}
               <h3 className="text-2xl font-bold text-yellow-400 mb-4">Be Part of the Family</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-300 mb-6 text-base">
                 Join fellow Monko enthusiasts sharing memes, trading tips, and building the future of community-driven
                 crypto together.
               </p>
-              <div className="space-y-3">
-                <div className="flex items-center justify-center space-x-2">
-                  <span className="text-green-500 text-xl">👥</span>
-                  <span className="text-gray-300">Growing Community</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <span className="text-blue-500 text-xl">💬</span>
-                  <span className="text-gray-300">Active Discussions</span>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <span className="text-purple-500 text-xl">✉️</span>
-                  <span className="text-gray-300">Exciting Contests</span>
-                </div>
-              </div>
             </CardContent>
           </Card>
-
           <Card className="bg-blue-900 border-blue-700">
             <CardContent className="p-8">
-              <img src="/monko-template-what.png" alt="Curious Monko" className="w-32 h-32 mx-auto mb-6" />
+              <img
+                src="/monko-character-affluent.png"
+                alt="Curious Monko"
+                className="w-32 h-32 mx-auto mb-6 object-contain"
+              />{" "}
+              {/* Added object-contain */}
               <h3 className="text-2xl font-bold text-yellow-400 mb-4 text-center">Community Highlights</h3>
-              <div className="space-y-4">
+              <div className="space-y-4 text-base">
+                {" "}
+                {/* Adjusted text size */}
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300">Total Members</span>
                   <span className="text-white font-bold">Join to see!</span>
@@ -67,12 +61,14 @@ export function CommunitySection() {
           </Card>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white p-6 h-auto flex flex-col items-center space-y-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {" "}
+          {/* Changed to grid-cols-1 for mobile, sm:grid-cols-2 for small screens */}
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white p-6 h-auto flex flex-col items-center space-y-2 text-lg">
             <img src="/twitter-icon.png" alt="Twitter Icon" className="w-10 h-10 object-contain" />
             <span>Follow Twitter</span>
           </Button>
-          <Button className="bg-blue-500 hover:bg-blue-600 text-white p-6 h-auto flex flex-col items-center space-y-2">
+          <Button className="bg-blue-500 hover:bg-blue-600 text-white p-6 h-auto flex flex-col items-center space-y-2 text-lg">
             <img src="/telegram-icon.png" alt="Telegram Icon" className="w-10 h-10 object-contain" />
             <span>Join Telegram</span>
           </Button>

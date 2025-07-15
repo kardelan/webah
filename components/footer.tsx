@@ -2,14 +2,15 @@ export function Footer() {
   return (
     <footer className="py-12 px-4 border-t border-blue-800">
       <div className="container mx-auto max-w-4xl">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
+          {" "}
+          {/* Changed to grid-cols-1 for mobile, added text alignment */}
           <div>
             <h3 className="text-yellow-400 font-bold text-xl mb-4">$MONKO</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               The memecoin with many faces, built on Algorand for the community, by the community.
             </p>
           </div>
-
           <div>
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -35,7 +36,6 @@ export function Footer() {
               </li>
             </ul>
           </div>
-
           <div>
             <h4 className="text-white font-semibold mb-4">Community</h4>
             <ul className="space-y-2">
@@ -49,7 +49,6 @@ export function Footer() {
                   Telegram
                 </a>
               </li>
-              {/* Removed Discord and Reddit links */}
             </ul>
           </div>
         </div>

@@ -56,19 +56,23 @@ export function StorySection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {" "}
+          {/* Changed to grid-cols-1 for mobile */}
           {stories.map((story, index) => (
             <Card key={index} className="bg-blue-900 border-blue-700 hover:border-yellow-400 transition-colors">
               <CardContent className="p-6">
-                <div className="mb-4">
-                  <img
-                    src={story.image || "/placeholder.svg"}
-                    alt={story.title}
-                    className="w-24 h-24 mx-auto object-contain"
-                  />
+                <div className="mb-4 flex justify-center">
+                  {" "}
+                  {/* Added flex justify-center for image */}
+                  <img src={story.image || "/placeholder.svg"} alt={story.title} className="w-24 h-24 object-contain" />
                 </div>
                 <h3 className="text-xl font-bold text-yellow-400 mb-3 text-center">{story.title}</h3>
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">{story.description}</p>
+                <p className="text-gray-300 text-sm mb-4 leading-relaxed text-center">
+                  {" "}
+                  {/* Added text-center */}
+                  {story.description}
+                </p>
                 <div className="bg-blue-800 p-3 rounded-lg">
                   <p className="text-yellow-400 text-xs italic text-center">{story.meme}</p>
                 </div>

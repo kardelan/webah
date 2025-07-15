@@ -8,40 +8,26 @@ export function AboutSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img src="/monko-hamlet.png" alt="Monko Contemplating" className="w-full max-w-md mx-auto" />{" "}
-            {/* Kept monko-hamlet.png for philosophy */}
+          <div className="flex justify-center">
+            {" "}
+            {/* Added flex and justify-center for centering image */}
+            <img src="/monko-hamlet.png" alt="Monko Contemplating" className="w-full max-w-sm mx-auto" />{" "}
+            {/* Adjusted max-w-md to max-w-sm for better mobile scaling */}
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6 text-center md:text-left">
+            {" "}
+            {/* Added text alignment for mobile */}
             <h3 className="text-2xl font-bold text-yellow-400">The Philosophy of Monko</h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-base">
               Monko isn't just another memecoin character. He's a reflection of all of us in the crypto space -
               sometimes wise like a samurai, sometimes relaxed like on vacation, sometimes contemplative like Hamlet,
               and sometimes just chilling on the couch.
             </p>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-base">
               Built on the Algorand blockchain, $MONKO represents the community-driven spirit of meme culture while
               maintaining the technical excellence and environmental consciousness that Algorand provides.
             </p>
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">✓</span>
-              </div>
-              <span className="text-gray-300">Community Owned & Driven</span>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">✓</span>
-              </div>
-              <span className="text-gray-300">Environmentally Friendly (Algorand)</span>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">✓</span>
-              </div>
-              <span className="text-gray-300">Meme-Driven Utility</span>
-            </div>
           </div>
         </div>
       </div>
