@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 
 export function HeroSection() {
-  const contractAddress = "2494786278"
+  // const contractAddress = "2494786278" // Removed as it's no longer needed
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -41,17 +41,13 @@ export function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Contract Address */}
+        {/* Contract Address / Coming Soon */}
         <motion.div
           variants={itemVariants}
           className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-2 bg-blue-800 border border-yellow-400/30 rounded-lg px-4 py-2 max-w-md mx-auto text-sm"
         >
-          <span className="text-yellow-400 font-mono">$MONK</span>
-          <span className="text-gray-400 font-mono break-all">{contractAddress}</span>
-          <div className="flex space-x-2">
-            <button className="text-gray-400 hover:text-yellow-400 transition-colors">Copy</button>
-            <button className="text-gray-400 hover:text-yellow-400 transition-colors">Link</button>
-          </div>
+          <span className="text-yellow-400 font-mono">$MONK CA : Coming Soon Copy</span>
+          {/* Removed contractAddress, Copy, and Link buttons */}
         </motion.div>
 
         {/* Main Title */}
