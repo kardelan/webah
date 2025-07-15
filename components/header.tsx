@@ -25,7 +25,7 @@ export function Header() {
   return (
     <header className="fixed top-0 w-full z-50 bg-blue-950/95 backdrop-blur-sm border-b border-blue-800">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="text-yellow-400 font-bold text-2xl">$MONKO</div>
+        {/* Remove the div containing "$MONK" */}
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">

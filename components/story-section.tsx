@@ -1,4 +1,7 @@
+"use client" // This component needs to be a client component for Framer Motion
+
 import { Card, CardContent } from "@/components/ui/card"
+import { motion } from "framer-motion"
 
 const stories = [
   {
@@ -46,41 +49,65 @@ const stories = [
 ]
 
 export function StorySection() {
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 10,
+        stiffness: 100,
+        staggerChildren: 0.1,
+      },
+    },
+  }
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  }
+
   return (
-    <section id="story" className="py-20 px-4">
+    <motion.section
+      id="story"
+      className="py-20 px-4"
+      variants={sectionVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <motion.div variants={cardVariants} className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">The Many Faces of Monko</h2>
           <p className="text-gray-300 text-lg">
             Every crypto journey has different phases, and Monko has lived them all
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {" "}
-          {/* Changed to grid-cols-1 for mobile */}
           {stories.map((story, index) => (
-            <Card key={index} className="bg-blue-900 border-blue-700 hover:border-yellow-400 transition-colors">
-              <CardContent className="p-6">
-                <div className="mb-4 flex justify-center">
-                  {" "}
-                  {/* Added flex justify-center for image */}
-                  <img src={story.image || "/placeholder.svg"} alt={story.title} className="w-24 h-24 object-contain" />
-                </div>
-                <h3 className="text-xl font-bold text-yellow-400 mb-3 text-center">{story.title}</h3>
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed text-center">
-                  {" "}
-                  {/* Added text-center */}
-                  {story.description}
-                </p>
-                <div className="bg-blue-800 p-3 rounded-lg">
-                  <p className="text-yellow-400 text-xs italic text-center">{story.meme}</p>
-                </div>
-              </CardContent>
-            </Card>
+            <motion.div key={index} variants={cardVariants}>
+              <Card className="bg-blue-900 border-blue-700 hover:border-yellow-400 transition-colors">
+                <CardContent className="p-6">
+                  <div className="mb-4 flex justify-center">
+                    <img
+                      src={story.image || "/placeholder.svg"}
+                      alt={story.title}
+                      className="w-24 h-24 mx-auto object-contain"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold text-yellow-400 mb-3 text-center">{story.title}</h3>
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed text-center">{story.description}</p>
+                  <div className="bg-blue-800 p-3 rounded-lg">
+                    <p className="text-yellow-400 text-xs italic text-center">{story.meme}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
