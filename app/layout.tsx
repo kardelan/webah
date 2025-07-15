@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "$MONKO", // Updated web title
+  title: "$MONK", // Updated web title
   description: "The Memecoin with Many Faces",
   icons: {
     icon: "/monko-avatar-monk.png", // Updated favicon

@@ -67,12 +67,22 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-4">Community</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-yellow-400 text-sm">
+                <a
+                  href="https://x.com/monkocoin_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-yellow-400 text-sm"
+                >
                   Twitter
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-yellow-400 text-sm">
+                <a
+                  href="https://t.me/monkocoin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-yellow-400 text-sm"
+                >
                   Telegram
                 </a>
               </li>

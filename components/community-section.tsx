@@ -1,6 +1,4 @@
 "use client" // This component needs to be a client component for Framer Motion
-
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
 
@@ -94,14 +92,24 @@ export function CommunitySection() {
         </div>
 
         <motion.div variants={buttonVariants} className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white p-6 h-auto flex flex-col items-center space-y-2 text-lg">
+          <a
+            href="https://x.com/monkocoin_"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-600 hover:bg-blue-700 text-white p-6 h-auto flex flex-col items-center space-y-2 text-lg rounded-md"
+          >
             <img src="/twitter-icon.png" alt="Twitter Icon" className="w-10 h-10 object-contain" />
             <span>Follow Twitter</span>
-          </Button>
-          <Button className="bg-blue-500 hover:bg-blue-600 text-white p-6 h-auto flex flex-col items-center space-y-2 text-lg">
+          </a>
+          <a
+            href="https://t.me/monkocoin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-500 hover:bg-blue-600 text-white p-6 h-auto flex flex-col items-center space-y-2 text-lg rounded-md"
+          >
             <img src="/telegram-icon.png" alt="Telegram Icon" className="w-10 h-10 object-contain" />
             <span>Join Telegram</span>
-          </Button>
+          </a>
         </motion.div>
       </div>
     </motion.section>
