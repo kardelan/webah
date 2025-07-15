@@ -21,7 +21,7 @@ export function LoadingScreen() {
       <div className="text-center">
         <img src="/monko-character-monk.png" alt="Loading Monko" className="w-48 h-48 mx-auto animate-pulse" />{" "}
         {/* Updated to monko-character-monk.png */}
-        <p className="mt-4 text-white text-xl font-semibold">Loading Monko Universe...</p>
+        <p className="mt-4 text-white text-xl font-semibold">Welcome to MONKO</p>
       </div>
     </div>
   )
