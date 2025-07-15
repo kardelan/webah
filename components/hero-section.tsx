@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 
 export function HeroSection() {
-  // const contractAddress = "2494786278" // Removed as it's no longer needed
+  const contractAddress = "0x238ce6a8448248e6111f7ce6506574947b34dd63" // Updated contract address
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -25,6 +25,11 @@ export function HeroSection() {
     visible: { opacity: 1, y: 0 },
   }
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(contractAddress)
+    alert("Contract address copied!") // Simple alert for feedback
+  }
+
   return (
     <motion.section
       id="hero"
@@ -41,13 +46,26 @@ export function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Contract Address / Coming Soon */}
+        {/* Contract Address */}
         <motion.div
           variants={itemVariants}
           className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-2 bg-blue-800 border border-yellow-400/30 rounded-lg px-4 py-2 max-w-md mx-auto text-sm"
         >
-          <span className="text-yellow-400 font-mono">$MONK CA : Coming Soon Copy</span>
-          {/* Removed contractAddress, Copy, and Link buttons */}
+          <span className="text-yellow-400 font-mono">$MONK</span>
+          <span className="text-gray-400 font-mono break-all">{contractAddress}</span>
+          <div className="flex space-x-2">
+            <button onClick={handleCopy} className="text-gray-400 hover:text-yellow-400 transition-colors">
+              Copy
+            </button>
+            <a
+              href={`https://basescan.org/address/${contractAddress}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-yellow-400 transition-colors"
+            >
+              Link
+            </a>
+          </div>
         </motion.div>
 
         {/* Main Title */}
@@ -69,9 +87,15 @@ export function HeroSection() {
 
         {/* Buy Button */}
         <motion.div variants={itemVariants}>
-          <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-8 py-3 text-lg">
-            Join the Monko Army
-          </Button>
+          <a
+            href="https://ape.store/base/0x238ce6a8448248e6111f7ce6506574947b34dd63"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-8 py-3 text-lg">
+              Buy $MONK
+            </Button>
+          </a>
         </motion.div>
       </motion.div>
     </motion.section>

@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react" // Import icons for mobile menu
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const apeStoreLink = "https://ape.store/base/0x238ce6a8448248e6111f7ce6506574947b34dd63"
 
   const handleScroll = (id: string) => {
     const element = document.getElementById(id)
@@ -156,14 +157,20 @@ export function Header() {
                 Community
               </a>
             </nav>
-            <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-8 py-3 text-xl">
-              Buy $MONK
-            </Button>
+            <a href={apeStoreLink} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-8 py-3 text-xl">
+                Buy $MONK
+              </Button>
+            </a>
           </div>
         )}
 
         {/* Buy $MONK Button (Desktop) */}
-        <Button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold hidden md:block">Buy $MONK</Button>
+        <a href={apeStoreLink} target="_blank" rel="noopener noreferrer">
+          <Button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold hidden md:block">
+            Buy $MONK
+          </Button>
+        </a>
       </div>
     </header>
   )
