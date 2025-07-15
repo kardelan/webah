@@ -50,7 +50,7 @@ export function AboutSection() {
               and sometimes just chilling on the couch.
             </p>
             <p className="text-gray-300 leading-relaxed text-base">
-              Built for the Ape Store, $MONKO represents the community-driven spirit of meme culture while maintaining
+              Built for the Ape Store, $MONK represents the community-driven spirit of meme culture while maintaining
               the technical excellence and environmental consciousness that Ape Store provides.
             </p>
           </motion.div>
