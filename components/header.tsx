@@ -25,8 +25,6 @@ export function Header() {
   return (
     <header className="fixed top-0 w-full z-50 bg-blue-950/95 backdrop-blur-sm border-b border-blue-800">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Remove the div containing "$MONK" */}
-
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a
@@ -159,15 +157,13 @@ export function Header() {
               </a>
             </nav>
             <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-8 py-3 text-xl">
-              Buy $MONKO
+              Buy $MONK
             </Button>
           </div>
         )}
 
-        {/* Buy $MONKO Button (Desktop) */}
-        <Button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold hidden md:block">
-          Buy $MONKO
-        </Button>
+        {/* Buy $MONK Button (Desktop) */}
+        <Button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold hidden md:block">Buy $MONK</Button>
       </div>
     </header>
   )
