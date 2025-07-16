@@ -1,141 +1,80 @@
-"use client" // This component needs to be a client component for Framer Motion
-
-import { Card, CardContent } from "@/components/ui/card"
-import { motion } from "framer-motion"
-
-const roadmapPhases = [
-  {
-    phase: "Phase 1",
-    title: "The Birth of Monko",
-    status: "completed",
-    items: [
-      "Launch on Ape Store", // Changed from "Token Launch on Algorand"
-      "Community Building",
-      "Initial Meme Creation",
-      "Social Media Presence",
-      "First DEX Listing",
-    ],
-  },
-  {
-    phase: "Phase 2",
-    title: "Growing the Army",
-    status: "current",
-    items: [
-      "Major Exchange Listings",
-      "NFT Collection Launch",
-      "Staking Rewards Program",
-      "Community Governance",
-      "Meme Contest Platform",
-    ],
-  },
-  {
-    phase: "Phase 3",
-    title: "Monko Ecosystem",
-    status: "future",
-    items: [
-      "Monko DeFi Platform",
-      "Cross-Chain Bridge",
-      "Mobile App Launch",
-      "Merchandise Store",
-      "Gaming Integration",
-    ],
-  },
-  {
-    phase: "Phase 4",
-    title: "To the Moon",
-    status: "future",
-    items: [
-      "Global Partnerships",
-      "Monko Metaverse",
-      "Educational Platform",
-      "Charity Initiatives",
-      "World Domination 🌍",
-    ],
-  },
-]
+import { GlowingCard } from "./ui/glowing-card"
+import { Rocket, Wrench, FlaskConical } from "lucide-react"
 
 export function RoadmapSection() {
-  const sectionVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        damping: 10,
-        stiffness: 100,
-        staggerChildren: 0.15,
-      },
-    },
-  }
-
-  const cardVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
-  }
-
   return (
-    <motion.section
-      id="roadmap"
-      className="py-20 px-4"
-      variants={sectionVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-    >
-      <div className="container mx-auto">
-        <motion.div variants={cardVariants} className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Roadmap</h2>
-          <p className="text-gray-300 text-lg">The journey of Monko through the crypto universe</p>
-        </motion.div>
+    <section className="w-full py-12 md:py-24 lg:py-32 relative z-0">
+      <div className="container px-4 md:px-6 text-center">
+        <div className="max-w-6xl mx-auto mb-12">
+          <div className="flex justify-center items-center gap-4 mb-8">
+            <GlowingCard className="px-6 py-3 text-lg font-bold text-neon-blue">
+              CONTRACT: 0x0000000000000000000000000000000000000000
+            </GlowingCard>
+            <GlowingCard className="px-6 py-3 text-lg font-bold text-neon-blue">NETWORK: Ethereum</GlowingCard>
+            <GlowingCard className="px-6 py-3 text-lg font-bold text-neon-blue">DEX: Uniswap V3</GlowingCard>
+          </div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {roadmapPhases.map((phase, index) => (
-            <motion.div key={index} variants={cardVariants}>
-              <Card
-                className={`bg-blue-900 border-2 ${
-                  phase.status === "completed"
-                    ? "border-green-500"
-                    : phase.status === "current"
-                      ? "border-yellow-400"
-                      : "border-blue-700"
-                }`}
-              >
-                <CardContent className="p-6">
-                  <div className="flex flex-col sm:flex-row items-center justify-between mb-4 text-center sm:text-left">
-                    <div>
-                      <span className="text-sm text-gray-400">{phase.phase}</span>
-                      <h3 className="text-xl font-bold text-white">{phase.title}</h3>
-                    </div>
-                    <div className="flex items-center space-x-2 mt-2 sm:mt-0">
-                      {phase.status === "completed" && <span className="text-green-500 font-bold">Done</span>}
-                      {phase.status === "current" && <span className="text-yellow-400 font-bold">In Progress</span>}
-                      {phase.status === "future" && <span className="text-gray-400 font-bold">Planned</span>}
-                    </div>
-                  </div>
+        <h2 className="text-4xl font-bold text-neon-blue mb-12 text-glow">ROADMAP</h2>
 
-                  <ul className="space-y-2">
-                    {phase.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center space-x-3">
-                        <div
-                          className={`w-2 h-2 rounded-full ${
-                            phase.status === "completed"
-                              ? "bg-green-500"
-                              : phase.status === "current"
-                                ? "bg-yellow-400"
-                                : "bg-gray-500"
-                          }`}
-                        ></div>
-                        <span className="text-gray-300 text-sm">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <GlowingCard className="p-6 space-y-4 text-left">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-3 h-3 rounded-full bg-red-500" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500" />
+              <div className="w-3 h-3 rounded-full bg-green-500" />
+              <h3 className="text-xl font-bold text-neon-blue ml-4">PHASE 1 - Q1 2025</h3>
+            </div>
+            <div className="flex flex-col items-center justify-center space-y-2">
+              <Rocket className="h-12 w-12 text-neon-blue text-glow" />
+              <h4 className="text-2xl font-bold text-white text-glow">LAUNCH</h4>
+            </div>
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <li>Website and Whitepaper</li>
+              <li>Community building</li>
+              <li>Smart contract audit</li>
+            </ul>
+          </GlowingCard>
+
+          <GlowingCard className="p-6 space-y-4 text-left">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-3 h-3 rounded-full bg-red-500" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500" />
+              <div className="w-3 h-3 rounded-full bg-green-500" />
+              <h3 className="text-xl font-bold text-neon-blue ml-4">PHASE 2 - Q2 2025</h3>
+            </div>
+            <div className="flex flex-col items-center justify-center space-y-2">
+              <Wrench className="h-12 w-12 text-neon-blue text-glow" />
+              <h4 className="text-2xl font-bold text-white text-glow">DEVELOPMENT</h4>
+            </div>
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <li>DEX listing</li>
+              <li>Marketing campaigns</li>
+              <li>Partnership announcements</li>
+              <li>Tesla Dog Robot research</li>
+            </ul>
+          </GlowingCard>
+
+          <GlowingCard className="p-6 space-y-4 text-left">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-3 h-3 rounded-full bg-red-500" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500" />
+              <div className="w-3 h-3 rounded-full bg-green-500" />
+              <h3 className="text-xl font-bold text-neon-blue ml-4">PHASE 3 - Q3 2025</h3>
+            </div>
+            <div className="flex flex-col items-center justify-center space-y-2">
+              <FlaskConical className="h-12 w-12 text-neon-blue text-glow" />
+              <h4 className="text-2xl font-bold text-white text-glow">PROTOTYPE</h4>
+            </div>
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <li>Tesla Dog Robot prototype</li>
+              <li>AI integration testing</li>
+              <li>Security feature development</li>
+              <li>Beta testing program</li>
+            </ul>
+          </GlowingCard>
         </div>
       </div>
-    </motion.section>
+    </section>
   )
 }

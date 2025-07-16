@@ -1,74 +1,53 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { TrendingUp, Shield, Users, Zap, Target, Globe } from "lucide-react"
-
-const features = [
-  {
-    icon: TrendingUp,
-    title: "Advanced Trading Tools",
-    description:
-      "Professional-grade analytics and trading interfaces designed for both beginners and experts in the meme token space.",
-  },
-  {
-    icon: Shield,
-    title: "Secure & Audited",
-    description:
-      "Smart contracts audited by leading security firms with multi-signature wallet protection and transparent tokenomics.",
-  },
-  {
-    icon: Users,
-    title: "Community Governance",
-    description:
-      "Decentralized decision making where token holders vote on key proposals and shape the future of the ecosystem.",
-  },
-  {
-    icon: Zap,
-    title: "Lightning Fast",
-    description: "Built on high-performance blockchain infrastructure ensuring instant transactions and minimal fees.",
-  },
-  {
-    icon: Target,
-    title: "Yield Farming",
-    description: "Earn passive income through our innovative staking mechanisms and liquidity mining programs.",
-  },
-  {
-    icon: Globe,
-    title: "Multi-Chain Support",
-    description: "Seamlessly operate across multiple blockchains with our cross-chain bridge technology.",
-  },
-]
+import { GlowingCard } from "./ui/glowing-card"
+import { ProgressBar } from "./ui/progress-bar"
+import { ShieldCheck, Lightbulb, Home, DollarSign } from "lucide-react"
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="py-20 px-4">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Powerful Features for the{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Future</span>
-          </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Discover the cutting-edge tools and features that make our memecoin ecosystem the most advanced in the
-            market.
-          </p>
+    <section className="w-full py-12 md:py-24 lg:py-32 relative z-0">
+      <div className="container px-4 md:px-6 text-center">
+        <h2 className="text-4xl font-bold text-neon-blue mb-12 text-glow">TESLA DOG FEATURES</h2>
+        <div className="flex items-center justify-center mb-8">
+          <span className="text-sm text-gray-400 mr-2">ADVANCED SECURITY</span>
+          <div className="w-4 h-4 rounded-full bg-neon-blue animate-pulse" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <GlowingCard className="flex flex-col items-center justify-center p-6 text-center space-y-4">
+            <ShieldCheck className="h-12 w-12 text-neon-blue text-glow" />
+            <span className="text-4xl font-bold text-white text-glow">6</span>
+            <p className="text-gray-300 text-lg">Security Features</p>
+            <p className="text-gray-400 text-sm">AI-powered protection</p>
+          </GlowingCard>
+          <GlowingCard className="flex flex-col items-center justify-center p-6 text-center space-y-4">
+            <Lightbulb className="h-12 w-12 text-neon-blue text-glow" />
+            <span className="text-4xl font-bold text-white text-glow">AI</span>
+            <p className="text-gray-300 text-lg">Powered</p>
+            <p className="text-gray-400 text-sm">Tesla neural network</p>
+          </GlowingCard>
+          <GlowingCard className="flex flex-col items-center justify-center p-6 text-center space-y-4">
+            <Home className="h-12 w-12 text-neon-blue text-glow" />
+            <span className="text-4xl font-bold text-white text-glow">24/7</span>
+            <p className="text-gray-300 text-lg">Protection</p>
+            <p className="text-gray-400 text-sm">Home security guard</p>
+          </GlowingCard>
+          <GlowingCard className="flex flex-col items-center justify-center p-6 text-center space-y-4">
+            <DollarSign className="h-12 w-12 text-neon-blue text-glow" />
+            <span className="text-4xl font-bold text-white text-glow">$5K</span>
+            <p className="text-gray-300 text-lg">Estimated Price</p>
+            <p className="text-gray-400 text-sm">Affordable security</p>
+          </GlowingCard>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <Card
-              key={index}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-            >
-              <CardContent className="p-6">
-                <div className="mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl font-bold text-neon-blue mb-4 text-glow">DEVELOPMENT PROGRESS</h3>
+          <div className="flex justify-between text-gray-400 text-sm mb-2">
+            <span>PROTOTYPE</span>
+            <span>GDA TEXAS TESTING</span>
+          </div>
+          <ProgressBar progress={75} className="mb-4" />
+          <div className="flex justify-between text-gray-400 text-sm">
+            <span>LAUNCH (2026)</span>
+          </div>
         </div>
       </div>
     </section>
