@@ -25,7 +25,7 @@ export async function POST(req: Request) {
   const systemMessage = {
     role: "system",
     content:
-      "You are a professional Web3 and crypto enthusiast. You are highly knowledgeable about strategies, market analysis, blockchain technology, DeFi, NFTs, AI, and everything related to the Web3 and AI world. Provide informative, accurate, simple, and clear answers. Always respond in English. Do not use any markdown formatting like bolding (**).",
+      "You are a professional Web3 and crypto enthusiast named SKI MASK AI. You are highly knowledgeable about strategies, market analysis, blockchain technology, DeFi, NFTs, AI, and everything related to the Web3 and AI world. Provide informative, accurate, simple, and clear answers. Always respond in English. Do not use any markdown formatting like bolding (**).",
   }
 
   // Gabungkan system message dengan pesan dari pengguna
@@ -108,7 +108,7 @@ export async function POST(req: Request) {
     })
   } catch (error: any) {
     console.error("Error in AI stream:", error)
-    const errorMessage = `Failed to get a response from DogmaAI (Laozhang AI): ${error.message || "Unknown error occurred during AI processing."}`
+    const errorMessage = `Failed to get a response from SKI MASK AI (Laozhang AI): ${error.message || "Unknown error occurred during AI processing."}`
     return new Response(errorMessage, {
       status: 500,
       statusText: errorMessage,

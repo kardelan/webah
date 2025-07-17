@@ -81,9 +81,9 @@ export function InteractiveTerminal() {
   const scrollAreaRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const welcomeMessage = "Dog Agent AI version 2.0.1 - Professional Crypto & Web3 Expert System"
+  const welcomeMessage = "SKI MASK AI version 2.0.1 - Professional Crypto & Web3 Expert System"
   const instructions =
-    "Type 'help' for commands, 'dogagent <query>' for expert analysis, or 'ai <query>' for advanced crypto consultation"
+    "Type 'help' for commands, 'skimask <query>' for expert analysis, or 'ai <query>' for advanced crypto consultation"
 
   useEffect(() => {
     if (typingWelcome) {
@@ -118,7 +118,7 @@ export function InteractiveTerminal() {
         output.push({ type: "output", content: "  whoami - Display current user" })
         output.push({ type: "output", content: "  clear - Clear terminal" })
         output.push({ type: "output", content: "  date - Show current date and time" })
-        output.push({ type: "output", content: "  dogagent <query> - Get crypto/web3 analysis" })
+        output.push({ type: "output", content: "  skimask <query> - Get crypto/web3 analysis" })
         output.push({ type: "output", content: "  ai <query> - Advanced AI consultation" })
         break
       case "ls":
@@ -259,7 +259,7 @@ export function InteractiveTerminal() {
       case "date":
         output.push({ type: "output", content: new Date().toLocaleString() })
         break
-      case "dogagent": // Changed from dogma
+      case "skimask": // Changed from dogma
       case "ai":
         const aiQuery = args.join(" ")
         if (!aiQuery) {
@@ -360,7 +360,7 @@ export function InteractiveTerminal() {
   return (
     <div className="flex flex-col h-[500px] bg-black border border-terminal-green p-4 rounded-md shadow-inner shadow-terminal-green/50">
       <div className="flex justify-between text-terminal-green text-sm mb-2">
-        <span>{`guest@dogagent-ai:${currentPath}$`}</span>
+        <span>{`guest@ski-mask-ai:${currentPath}$`}</span>
         <span className="text-terminal-amber">[INTERACTIVE SHELL - AI POWERED]</span>
       </div>
       <ScrollArea className="flex-1 pr-4 mb-4" viewportRef={scrollAreaRef}>
@@ -378,7 +378,7 @@ export function InteractiveTerminal() {
               ) : (
                 <>
                   {line.type === "command" && (
-                    <span className="text-terminal-amber">{`guest@dogagent-ai:${currentPath}$ `}</span>
+                    <span className="text-terminal-amber">{`guest@ski-mask-ai:${currentPath}$ `}</span>
                   )}
                   {line.content}
                 </>
@@ -387,7 +387,7 @@ export function InteractiveTerminal() {
           ))}
           {(isAILoading || !typingWelcome) && (
             <div className="flex items-center">
-              <span className="text-terminal-amber">{`guest@dogagent-ai:${currentPath}$ `}</span>
+              <span className="text-terminal-amber">{`guest@ski-mask-ai:${currentPath}$ `}</span>
               {isAILoading && <span className="ml-1 text-terminal-green italic">Thinking...</span>}
               <BlinkingCursor />
             </div>
@@ -450,10 +450,10 @@ export function InteractiveTerminal() {
         <Button
           variant="outline"
           className="border-terminal-green text-terminal-green hover:bg-terminal-green/20 bg-transparent"
-          onClick={() => handleQuickCommand("dogagent what is DeFi?")}
+          onClick={() => handleQuickCommand("skimask what is DeFi?")}
           disabled={isAILoading}
         >
-          dogagent what is DeFi?
+          skimask what is DeFi?
         </Button>
         <Button
           variant="outline"
@@ -461,7 +461,7 @@ export function InteractiveTerminal() {
           onClick={() => handleQuickCommand("ai summarize this text")}
           disabled={isAILoading}
         >
-          AI Mode
+          SKI MASK Mode
         </Button>
         <Button
           variant="outline"

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { TerminalLayout } from "@/components/terminal-layout"
-import { DogmaAIAvatar } from "@/components/dogma-ai-avatar"
+import { SkiMaskAIAvatar } from "@/components/ski-mask-ai-avatar"
 import { PowerOnAnimation } from "@/components/power-on-animation"
 import { HeaderStatus } from "@/components/header-status"
 import { TerminalTabs } from "@/components/terminal-tabs"
@@ -29,7 +29,7 @@ export default function Home() {
         </section>
 
         <aside className="lg:w-1/3 flex justify-center items-center lg:mt-0 mt-8">
-          <DogmaAIAvatar />
+          <SkiMaskAIAvatar />
         </aside>
       </main>
 

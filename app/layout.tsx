@@ -6,10 +6,10 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "DOG AGENT AI", // Diperbarui
-  description: "Your loyal AI companion – trained, fast, and always alert.",
+  title: "SKI MASK AI",
+  description: "Your stealthy AI companion – trained, fast, and always alert.",
   icons: {
-    icon: "/icon.png", // Diperbarui untuk favicon baru
+    icon: "/images/ski-mask-ai-avatar.png",
   },
     generator: 'v0.dev'
 }

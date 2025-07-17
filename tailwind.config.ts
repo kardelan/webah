@@ -53,7 +53,7 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "terminal-green": "#00BFFF", // Diubah dari #00FF00 menjadi biru neon
+        "terminal-green": "#00FF00", // Diubah dari biru neon menjadi hijau neon
         "terminal-amber": "#FFCC00",
       },
       borderRadius: {
@@ -89,8 +89,8 @@ const config: Config = {
           "100%": { opacity: "0", visibility: "hidden" },
         },
         "glow-eye": {
-          "0%, 100%": { boxShadow: "0 0 5px #00BFFF, 0 0 10px #00BFFF, 0 0 15px #00BFFF" }, // Diubah
-          "50%": { boxShadow: "0 0 2px #00BFFF, 0 0 4px #00BFFF, 0 0 6px #00BFFF" }, // Diubah
+          "0%, 100%": { boxShadow: "0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00" }, // Diubah
+          "50%": { boxShadow: "0 0 2px #00FF00, 0 0 4px #00FF00, 0 0 6px #00FF00" }, // Diubah
         },
       },
       animation: {

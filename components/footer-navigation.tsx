@@ -6,6 +6,8 @@ export function FooterNavigation() {
 +---------------------------------------------------+
 | [ ABOUT ] | [ DOCS ] | [ CONTACT ] |
 +---------------------------------------------------+
+| [ BUY DOGAI ] |
++---------------------------------------------------+
         `}
       </pre>
       <nav className="mt-2">
@@ -25,10 +27,20 @@ export function FooterNavigation() {
               CONTACT
             </a>
           </li>
+          <li>
+            <a
+              href="https://ape.store/base/0x1715de95144bd4442e590447df2aef25908d4fb4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-terminal-amber transition-colors duration-200"
+            >
+              BUY DOGAI
+            </a>
+          </li>
         </ul>
       </nav>
       <p className="mt-4 text-xs text-terminal-green/70 text-center">
-        {"> Dog Agent AI v2.0.1 // All systems nominal."}
+        {"> SKI MASK AI v2.0.1 // All systems nominal."}
       </p>
     </footer>
   )

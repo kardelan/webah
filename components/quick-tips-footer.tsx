@@ -58,7 +58,7 @@ export function QuickTipsFooter() {
       </div>
 
       <p className="mt-8 text-xs text-terminal-green/70 text-center">
-        {"> Dog Agent AI v2.0.1 // All systems nominal."}
+        {"> SKI MASK AI v2.0.1 // All systems nominal."}
       </p>
     </footer>
   )

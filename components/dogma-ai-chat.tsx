@@ -24,12 +24,12 @@ export function DogmaAIChat() {
           )}
           {messages.map((m) => (
             <p key={m.id} className={m.role === "user" ? "text-terminal-amber" : "text-terminal-green"}>
-              <span className="font-bold">{m.role === "user" ? "USER" : "DOG AGENT"}:</span> {m.content}
+              <span className="font-bold">{m.role === "user" ? "USER" : "SKI MASK"}:</span> {m.content}
             </p>
           ))}
           {isLoading && (
             <p className="text-terminal-green italic">
-              <span className="font-bold">DOG AGENT:</span> Thinking...
+              <span className="font-bold">SKI MASK:</span> Thinking...
               <BlinkingCursor />
             </p>
           )}
