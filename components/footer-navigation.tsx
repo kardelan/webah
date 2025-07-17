@@ -9,7 +9,7 @@ export function FooterNavigation() {
         `}
       </pre>
       <nav className="mt-2">
-        <ul className="flex justify-center space-x-6">
+        <ul className="flex justify-center space-x-6 flex-wrap">
           <li>
             <a href="#" className="hover:text-terminal-amber transition-colors duration-200">
               ABOUT
@@ -27,7 +27,9 @@ export function FooterNavigation() {
           </li>
         </ul>
       </nav>
-      <p className="mt-4 text-xs text-terminal-green/70">{"> DogmaAI v1.0.0 // All systems nominal."}</p>
+      <p className="mt-4 text-xs text-terminal-green/70 text-center">
+        {"> Dog Agent AI v2.0.1 // All systems nominal."}
+      </p>
     </footer>
   )
 }

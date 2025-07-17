@@ -29,6 +29,34 @@ export function QuickTipsFooter() {
           </ul>
         </div>
       </div>
+
+      {/* New Join Community Section */}
+      <div className="mt-8">
+        <h3 className="font-bold text-terminal-amber mb-2">Join Our Community:</h3>
+        <ul className="list-none space-y-1 flex flex-wrap gap-x-6 gap-y-2 justify-center md:justify-start">
+          <li>
+            <a
+              href="https://t.me/dogagentai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-terminal-amber transition-colors duration-200"
+            >
+              Telegram
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/dogagentai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-terminal-amber transition-colors duration-200"
+            >
+              Twitter
+            </a>
+          </li>
+        </ul>
+      </div>
+
       <p className="mt-8 text-xs text-terminal-green/70 text-center">
         {"> Dog Agent AI v2.0.1 // All systems nominal."}
       </p>
