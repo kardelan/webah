@@ -1,43 +1,39 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Header } from "@/components/header"
-import { HeroSection } from "@/components/hero-section"
-import { FeaturesSection } from "@/components/features-section"
-import { TradingPanelSection } from "@/components/trading-panel-section"
-import { RoadmapSection } from "@/components/roadmap-section"
-import { MilestonesSection } from "@/components/milestones-section"
-import { FaqSection } from "@/components/faq-section"
-import { FooterSection } from "@/components/footer-section"
-import { LoadingScreen } from "@/components/loading-screen"
+import { useState } from "react"
+import { TerminalLayout } from "@/components/terminal-layout"
+import { DogmaAIAvatar } from "@/components/dogma-ai-avatar"
+import { PowerOnAnimation } from "@/components/power-on-animation"
+import { HeaderStatus } from "@/components/header-status"
+import { TerminalTabs } from "@/components/terminal-tabs"
+import { QuickTipsFooter } from "@/components/quick-tips-footer"
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true)
+  const [showPowerOn, setShowPowerOn] = useState(true)
 
-  useEffect(() => {
-    // Simulate initial loading time
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 6000) // Adjust this time to match the loading screen animation
-    return () => clearTimeout(timer)
-  }, [])
+  const handlePowerOnComplete = () => {
+    setShowPowerOn(false)
+  }
 
-  if (isLoading) {
-    return <LoadingScreen onLoaded={() => setIsLoading(false)} />
+  if (showPowerOn) {
+    return <PowerOnAnimation onComplete={handlePowerOnComplete} />
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        <HeroSection />
-        <FeaturesSection />
-        <TradingPanelSection />
-        <RoadmapSection />
-        <MilestonesSection />
-        <FaqSection />
+    <TerminalLayout>
+      <HeaderStatus />
+
+      <main className="flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-12 p-4 md:p-8">
+        <section className="flex-1 w-full lg:w-auto max-w-4xl">
+          <TerminalTabs />
+        </section>
+
+        <aside className="lg:w-1/3 flex justify-center items-center lg:mt-0 mt-8">
+          <DogmaAIAvatar />
+        </aside>
       </main>
-      <FooterSection />
-    </div>
+
+      <QuickTipsFooter />
+    </TerminalLayout>
   )
 }

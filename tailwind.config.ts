@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss"
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -53,7 +53,8 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "neon-blue": "#00F0FF", // Custom neon blue color
+        "terminal-green": "#00FF00",
+        "terminal-amber": "#FFCC00",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -69,14 +70,41 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        blink: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" },
+        },
+        type: {
+          "0%": { width: "0" },
+          "100%": { width: "100%" },
+        },
+        "power-on-text": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "10%": { opacity: "1", transform: "translateY(0)" },
+          "90%": { opacity: "1", transform: "translateY(0)" },
+          "100%": { opacity: "0", transform: "translateY(-10px)" },
+        },
+        "fade-out": {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0", visibility: "hidden" },
+        },
+        "glow-eye": {
+          "0%, 100%": { boxShadow: "0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00" },
+          "50%": { boxShadow: "0 0 2px #00FF00, 0 0 4px #00FF00, 0 0 6px #00FF00" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        blink: "blink 1s step-end infinite",
+        type: "type 2s steps(40, end) forwards",
+        "power-on-text": "power-on-text 1.5s ease-in-out forwards",
+        "fade-out": "fade-out 1s forwards",
+        "glow-eye": "glow-eye 2s infinite alternate",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+}
 
 export default config
