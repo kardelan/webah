@@ -36,7 +36,7 @@ export function QuickTipsFooter() {
         <ul className="list-none space-y-1 flex flex-wrap gap-x-6 gap-y-2 justify-center md:justify-start">
           <li>
             <a
-              href="https://t.me/dogagentai"
+              href="https://t.me/dogaiportal"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-terminal-amber transition-colors duration-200"
@@ -46,7 +46,7 @@ export function QuickTipsFooter() {
           </li>
           <li>
             <a
-              href="https://twitter.com/dogagentai"
+              href="https://x.com/dogagentai"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-terminal-amber transition-colors duration-200"
