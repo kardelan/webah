@@ -6,7 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "SKI MASK AI",
+  title: "SKIMASK COSMO AI", // Diperbarui
   description: "Your stealthy AI companion – trained, fast, and always alert.",
   icons: {
     icon: "/images/ski-mask-ai-avatar.png",

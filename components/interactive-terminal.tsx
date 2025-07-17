@@ -1,13 +1,12 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useRef, useEffect, useCallback } from "react"
-import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { BlinkingCursor } from "@/components/blinking-cursor"
 import { TypingEffect } from "@/components/typing-effect"
+import { BlinkingCursor } from "@/components/blinking-cursor" // Added import for BlinkingCursor
 
 interface TerminalLine {
   type: "command" | "output" | "welcome" | "ai-output" | "ai-thinking" | "error"
@@ -81,7 +80,7 @@ export function InteractiveTerminal() {
   const scrollAreaRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const welcomeMessage = "SKI MASK AI version 2.0.1 - Professional Crypto & Web3 Expert System"
+  const welcomeMessage = "SKIMASK COSMO AI version 2.0.1 - Professional Crypto & Web3 Expert System" // Diperbarui
   const instructions =
     "Type 'help' for commands, 'skimask <query>' for expert analysis, or 'ai <query>' for advanced crypto consultation"
 
@@ -360,7 +359,7 @@ export function InteractiveTerminal() {
   return (
     <div className="flex flex-col h-[500px] bg-black border border-terminal-green p-4 rounded-md shadow-inner shadow-terminal-green/50">
       <div className="flex justify-between text-terminal-green text-sm mb-2">
-        <span>{`guest@ski-mask-ai:${currentPath}$`}</span>
+        <span>{`guest@skimask-cosmo-ai:${currentPath}$`}</span> {/* Diperbarui */}
         <span className="text-terminal-amber">[INTERACTIVE SHELL - AI POWERED]</span>
       </div>
       <ScrollArea className="flex-1 pr-4 mb-4" viewportRef={scrollAreaRef}>
@@ -378,7 +377,7 @@ export function InteractiveTerminal() {
               ) : (
                 <>
                   {line.type === "command" && (
-                    <span className="text-terminal-amber">{`guest@ski-mask-ai:${currentPath}$ `}</span>
+                    <span className="text-terminal-amber">{`guest@skimask-cosmo-ai:${currentPath}$ `}</span>
                   )}
                   {line.content}
                 </>
@@ -387,7 +386,7 @@ export function InteractiveTerminal() {
           ))}
           {(isAILoading || !typingWelcome) && (
             <div className="flex items-center">
-              <span className="text-terminal-amber">{`guest@ski-mask-ai:${currentPath}$ `}</span>
+              <span className="text-terminal-amber">{`guest@skimask-cosmo-ai:${currentPath}$ `}</span>
               {isAILoading && <span className="ml-1 text-terminal-green italic">Thinking...</span>}
               <BlinkingCursor />
             </div>
@@ -461,7 +460,7 @@ export function InteractiveTerminal() {
           onClick={() => handleQuickCommand("ai summarize this text")}
           disabled={isAILoading}
         >
-          SKI MASK Mode
+          SKIMASK COSMO Mode {/* Diperbarui */}
         </Button>
         <Button
           variant="outline"

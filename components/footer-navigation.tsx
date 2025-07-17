@@ -40,7 +40,7 @@ export function FooterNavigation() {
         </ul>
       </nav>
       <p className="mt-4 text-xs text-terminal-green/70 text-center">
-        {"> SKI MASK AI v2.0.1 // All systems nominal."}
+        {"> SKIMASK COSMO AI v2.0.1 // All systems nominal."} {/* Diperbarui */}
       </p>
     </footer>
   )

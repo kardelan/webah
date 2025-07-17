@@ -7,13 +7,15 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { BlinkingCursor } from "@/components/blinking-cursor"
 import { useEffect, useRef } from "react"
 
-export function DogmaAIChat() {
+export const DogmaAIChat = () => {
   const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat({
     streamProtocol: "text",
   })
   const bottomRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => bottomRef.current?.scrollIntoView({ behavior: "smooth" }), [messages])
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" })
+  }, [messages])
 
   return (
     <div className="flex flex-col h-[400px] md:h-[500px] bg-black border border-terminal-green p-4 rounded-md">
@@ -24,12 +26,12 @@ export function DogmaAIChat() {
           )}
           {messages.map((m) => (
             <p key={m.id} className={m.role === "user" ? "text-terminal-amber" : "text-terminal-green"}>
-              <span className="font-bold">{m.role === "user" ? "USER" : "SKI MASK"}:</span> {m.content}
+              <span className="font-bold">{m.role === "user" ? "USER" : "SKIMASK COSMO"}:</span> {m.content}
             </p>
           ))}
           {isLoading && (
             <p className="text-terminal-green italic">
-              <span className="font-bold">SKI MASK:</span> Thinking...
+              <span className="font-bold">SKIMASK COSMO:</span> Thinking...
               <BlinkingCursor />
             </p>
           )}
