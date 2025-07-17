@@ -3,11 +3,11 @@ import { useEffect, useState } from "react"
 
 export function PowerOnAnimation({ onComplete }: { onComplete: () => void }) {
   const boot = [
-    "BOOTING DOGAGENT AI OS…",
+    "BOOTING DOG AGENT AI OS…", // Diperbarui
     "LOADING KERNEL MODULES…",
     "ESTABLISHING NEURAL LINK…",
     "INITIATING AI PROTOCOLS…",
-    "DOGAGENT AI READY.",
+    "DOG AGENT AI READY.", // Diperbarui
   ]
   const [stage, setStage] = useState(0)
   const [fade, setFade] = useState(false)

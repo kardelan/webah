@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge"
 export function HeaderStatus() {
   return (
     <header className="flex justify-between items-center mb-6 border-b-2 border-terminal-green pb-4">
-      <h1 className="text-2xl md:text-3xl font-bold text-terminal-green">DOGAGENT TERMINAL AI</h1>
+      <h1 className="text-2xl md:text-3xl font-bold text-terminal-green">DOG AGENT AI</h1>
       <div className="flex flex-wrap justify-end gap-2">
         <Badge className="bg-terminal-green text-black px-3 py-1 rounded-sm text-xs md:text-sm">
           guest@dogagent-ai

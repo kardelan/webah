@@ -25,7 +25,7 @@ const fileSystem: Record<string, any> = {
           user: {
             type: "directory",
             contents: {
-              "welcome.txt": { type: "file", content: "Welcome to DogAgent AI! This is a simulated file." },
+              "welcome.txt": { type: "file", content: "Welcome to Dog Agent AI! This is a simulated file." },
               "commands.txt": {
                 type: "file",
                 content: "Available commands: help, ls, pwd, cd, cat, mkdir, touch, rm, whoami, clear, date.",
@@ -81,7 +81,7 @@ export function InteractiveTerminal() {
   const scrollAreaRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const welcomeMessage = "DogAgent AI version 2.0.1 - Professional Crypto & Web3 Expert System"
+  const welcomeMessage = "Dog Agent AI version 2.0.1 - Professional Crypto & Web3 Expert System"
   const instructions =
     "Type 'help' for commands, 'dogagent <query>' for expert analysis, or 'ai <query>' for advanced crypto consultation"
 

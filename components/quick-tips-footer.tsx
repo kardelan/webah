@@ -30,7 +30,7 @@ export function QuickTipsFooter() {
         </div>
       </div>
       <p className="mt-8 text-xs text-terminal-green/70 text-center">
-        {"> DogAgent AI v2.0.1 // All systems nominal."}
+        {"> Dog Agent AI v2.0.1 // All systems nominal."}
       </p>
     </footer>
   )
