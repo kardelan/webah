@@ -3,22 +3,26 @@ import { useEffect, useState } from "react"
 
 export function PowerOnAnimation({ onComplete }: { onComplete: () => void }) {
   const boot = [
-    "BOOTING DOGAGENT AI OS…", // Diperbarui
+    "BOOTING DOGAGENT AI OS…",
     "LOADING KERNEL MODULES…",
     "ESTABLISHING NEURAL LINK…",
     "INITIATING AI PROTOCOLS…",
-    "DOGAGENT AI READY.", // Diperbarui
+    "DOGAGENT AI READY.",
   ]
   const [stage, setStage] = useState(0)
   const [fade, setFade] = useState(false)
 
   useEffect(() => {
     if (stage < boot.length) {
-      const id = setTimeout(() => setStage((s) => s + 1), 800)
+      // Delay antar baris teks (4 baris x 1200ms = 4.8 detik)
+      const id = setTimeout(() => setStage((s) => s + 1), 1200)
       return () => clearTimeout(id)
     }
-    const fadeId = setTimeout(() => setFade(true), 400)
-    const doneId = setTimeout(onComplete, 1400)
+    // Mulai fade-out 200ms setelah baris terakhir muncul
+    const fadeId = setTimeout(() => setFade(true), 200)
+    // Selesaikan animasi (panggil onComplete) 1200ms setelah baris terakhir muncul
+    // (200ms untuk mulai fade + 1000ms durasi fade-out CSS)
+    const doneId = setTimeout(onComplete, 1200)
     return () => {
       clearTimeout(fadeId)
       clearTimeout(doneId)
