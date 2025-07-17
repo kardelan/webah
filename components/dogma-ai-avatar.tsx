@@ -6,9 +6,7 @@ export function DogmaAIAvatar() {
         alt="DogAgent AI Digital Cyberpunk Dog Avatar"
         width={320}
         height={320}
-        className="object-contain filter drop-shadow-[0_0_10px_rgba(0,255,0,0.7)]"
       />
-      {/* Elemen glowing eye telah dihapus */}
     </div>
   )
 }
